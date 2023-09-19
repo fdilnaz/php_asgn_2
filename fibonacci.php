@@ -1,19 +1,15 @@
 <?php
 
-function fibonacci() {
+function fibonacci($limit) {
     $start = 0;
     $end = 1;
 
-    for ($i = 1; $i <= 10; $i++) {
+    for ($i = 1; $i <= $limit; $i++) {
         echo $start . ' ';
         $next = $start + $end;
         $start = $end;
         $end = $next;
-
-        if($end > 100){
-            break;
-        }
     }
 }
 
-fibonacci();
+fibonacci(15);
