@@ -1,12 +1,13 @@
 <?php
 function evenNumbers($start, $end, $stepping) {
-    do{
-        if ($start % 2 === 0) {
-            echo $start . ' ';
-        }
+    do {
+        if($start % 2 !== 0) {
+        $start += 1;
+        }      
+        echo $start . ' ';
         $start+= $stepping;
     }
     while($start <= $end);
 }
 
-evenNumbers(2, 20, 2);
+evenNumbers(1, 20, 2);
