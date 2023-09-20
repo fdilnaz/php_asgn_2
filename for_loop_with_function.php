@@ -2,14 +2,15 @@
 
 // For Loop
 function evenNumbers($start, $end, $stepping) {
-    for ($i = $start; $i <= $end; $i+=$stepping) {
-        if ($i % 2 === 0) {
+    if($start % 2 !== 0){
+        $start += 1;
+    for ($i = $start; $i <= $end; $i+=$stepping) {       
             echo $i . ' ';
         }
     }
 }
 
-evenNumbers(2, 20, 2);
+evenNumbers(1, 20, 2);
 
 
 
